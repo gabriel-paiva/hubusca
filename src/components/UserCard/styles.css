@@ -18,8 +18,7 @@
   background-color: #6F7480;
 }
 
-.usercard .imagem {
-  background-color: cadetblue;
+.usercard img {
   width: 200px;
   height: 200px;
   border-radius: 8px;
