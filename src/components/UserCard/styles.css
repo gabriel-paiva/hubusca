@@ -1,0 +1,38 @@
+.usercard {
+  width: 500px;
+  height: 300px;
+  background-color: #F7F7FB;
+  border-radius: 8px;
+  box-shadow: 0px 13px 9px 4px rgba(0,0,0,0.12);
+
+  font-family: Roboto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.usercard .cssline {
+  height: 2px;
+  background-color: #6F7480;
+}
+
+.usercard .imagem {
+  background-color: cadetblue;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.usercard .data {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.usercard .data h1 {
+  font-size: 1.4em;
+}

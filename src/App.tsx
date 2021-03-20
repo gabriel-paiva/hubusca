@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import Logo from './assets/hubusca-logo.png';
+// Services:
 import api from './services/api';
+// Components:
+import Logo from './assets/hubusca-logo.png';
+import UserCard from './components/UserCard';
 
 const App: React.FC = () => {
   const [username, setUsername] = useState<string>('');
@@ -44,6 +47,7 @@ const App: React.FC = () => {
           <button id="link" type="button">Ver Histórico</button>
         </div>
       </form>
+      <UserCard />
     </div>
   );
 };
