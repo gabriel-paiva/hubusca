@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './styles.css';
 import api from '../../services/api';
+import RepositoryCard from '../../components/RepositoryCard';
 
 interface IUserData {
   login: string,
@@ -46,6 +47,14 @@ const Profile: React.FC = () => {
           <p>{userData.publicRepos}</p>
         </div>
         <div className="cssline" />
+        <div className="repositories">
+          <h1>{`Repositórios de ${userData.name}`}</h1>
+          <RepositoryCard />
+          <RepositoryCard />
+          <RepositoryCard />
+          <RepositoryCard />
+          <RepositoryCard />
+        </div>
       </div>
     </div>
   );
