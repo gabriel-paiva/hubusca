@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import transformDate from '../../utils/transformDate';
 
 interface IRepositoryData {
   name: string,
@@ -15,7 +16,8 @@ interface IProps {
 }
 
 const RepositoryCard: React.FC<IProps> = ({ repository }: IProps) => {
-  console.log(repository);
+  const createdDate = transformDate(repository.created_at);
+  const updatedDate = transformDate(repository.updated_at);
   return (
     <div className="repositorycard">
       <a href={repository.html_url}><h1>{repository.name}</h1></a>
@@ -25,11 +27,11 @@ const RepositoryCard: React.FC<IProps> = ({ repository }: IProps) => {
       </p>
       <p>
         <strong>Criado em:</strong>
-        {` ${repository.created_at}`}
+        {` ${createdDate}`}
       </p>
       <p>
         <strong>Última atualização:</strong>
-        {` ${repository.updated_at}`}
+        {` ${updatedDate}`}
       </p>
       <p>{repository.description}</p>
 
