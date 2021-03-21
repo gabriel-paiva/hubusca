@@ -10,7 +10,6 @@ import ErrorCard from '../../components/ErrorCard';
 const Home: React.FC = () => {
   const [username, setUsername] = useState<string>('');
   const [result, setResult] = useState(<div />);
-  // const [userData, setUserData] = useState<{}>({});
 
   const addSearchingClass = () => {
     const form = document.getElementById('searchform');
@@ -28,6 +27,7 @@ const Home: React.FC = () => {
       .then((response) => {
         const userData = response.data;
         userData.avatarUrl = response.data.avatar_url;
+        userData.publicRepos = response.data.public_repos;
         setResult(<UserCard userData={userData} />);
       })
       .catch(() => setResult(<ErrorCard />));
