@@ -16,11 +16,11 @@ interface IProps {
   userData: IUserData
 }
 
-const UserCard: React.FC<IProps> = ({ userData }: IProps) => {
-  console.log('Card de Usuário');
+const HistoryCard: React.FC<IProps> = ({ userData }: IProps) => {
+  console.log('Card de Histórico');
 
   return (
-    <div className="usercard">
+    <div className="historycard">
       <Link
         to={{
           pathname: '/profile',
@@ -29,20 +29,14 @@ const UserCard: React.FC<IProps> = ({ userData }: IProps) => {
       >
         <img src={userData.avatar_url} alt="Avatar" />
       </Link>
-      <div className="data">
-        <h1>{userData.name}</h1>
-        <p><strong>Usuário:</strong></p>
-        <p>
-          @
-          {userData.login}
-        </p>
-        <div className="cssline" />
-        <p><strong>Localização:</strong></p>
-        <p>{userData.location}</p>
-        <div className="cssline" />
-      </div>
+      <p>{userData.name}</p>
+      <p>
+        @
+        {userData.login}
+      </p>
+      <p>{userData.location}</p>
     </div>
   );
 };
 
-export default UserCard;
+export default HistoryCard;

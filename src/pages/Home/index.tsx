@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 // Services:
 import api from '../../services/api';
@@ -27,6 +28,10 @@ const Home: React.FC = () => {
       .then((response) => {
         const userData = response.data;
         setResult(<UserCard userData={userData} />);
+
+        const searchHistory = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+        searchHistory.push({ userData });
+        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
       })
       .catch(() => setResult(<ErrorCard />));
   };
@@ -51,7 +56,7 @@ const Home: React.FC = () => {
           >
             Pesquisar
           </button>
-          <button id="link" type="button">Ver Histórico</button>
+          <Link to="/history"><button id="link" type="button">Ver Histórico</button></Link>
         </div>
       </form>
       {result}
