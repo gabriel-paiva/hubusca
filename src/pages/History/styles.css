@@ -46,3 +46,13 @@
 .history .historytitle button:active {
   box-shadow: 5px 5px 15px 7px rgba(0,0,0,0.3);
 }
+
+@media(max-width: 765px){
+  .history {
+    min-width: 95vw;
+  }
+  .history .historytitle {
+    flex-direction: column;
+    align-items: center;
+  }
+}

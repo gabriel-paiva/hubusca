@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  padding: 5px;
 
   border-top: 1px solid #6F7480;
 }
@@ -17,4 +18,10 @@
 .historycard img {
   width: 70px;
   height: 70px;
+}
+
+@media(max-width: 550px){
+  .historycard {
+    flex-direction: column;
+  }
 }
