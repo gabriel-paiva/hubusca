@@ -18,6 +18,11 @@
 .historycard img {
   width: 70px;
   height: 70px;
+  border-radius: 8px;
+}
+
+.historycard img:hover {
+  box-shadow: 0px 0px 15px -3px #000000;
 }
 
 @media(max-width: 550px){
