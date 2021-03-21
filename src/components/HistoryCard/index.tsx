@@ -16,27 +16,23 @@ interface IProps {
   userData: IUserData
 }
 
-const HistoryCard: React.FC<IProps> = ({ userData }: IProps) => {
-  console.log('Card de Histórico');
-
-  return (
-    <div className="historycard">
-      <Link
-        to={{
-          pathname: '/profile',
-          state: { userData },
-        }}
-      >
-        <img src={userData.avatar_url} alt="Avatar" />
-      </Link>
-      <p>{userData.name}</p>
-      <p>
-        @
-        {userData.login}
-      </p>
-      <p>{userData.location}</p>
-    </div>
-  );
-};
+const HistoryCard: React.FC<IProps> = ({ userData }: IProps) => (
+  <div className="historycard">
+    <Link
+      to={{
+        pathname: '/profile',
+        state: { userData },
+      }}
+    >
+      <img src={userData.avatar_url} alt="Avatar" />
+    </Link>
+    <p>{userData.name}</p>
+    <p>
+      @
+      {userData.login}
+    </p>
+    <p>{userData.location}</p>
+  </div>
+);
 
 export default HistoryCard;
