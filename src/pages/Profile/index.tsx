@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import './styles.css';
 import api from '../../services/api';
 import RepositoryCard from '../../components/RepositoryCard';
+import Header from '../../components/Header';
 
 interface IRepositoryData {
   name: string,
@@ -44,6 +45,7 @@ const Profile: React.FC = () => {
 
   return (
     <div className="App">
+      <Header />
       <div className="profile">
         <div className="userstats">
           <img src={userData.avatar_url} alt="Avatar" />

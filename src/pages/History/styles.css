@@ -15,17 +15,17 @@
   overflow: auto;
 }
 
-.history .header {
+.history .historytitle {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.history .header h1 {
+.history .historytitle h1 {
   font-size: 1.8em;
 }
 
-.history .header button {
+.history .historytitle button {
   width: 170px;
   height: 40px;
   border-radius:  50px;
@@ -36,13 +36,13 @@
   color: #161A22;
 }
 
-.history .header button:hover {
+.history .historytitle button:hover {
   cursor: pointer;
   border-color:#161A22;
   background-color: #F2F2F5;
   color: #161A22;
 }
 
-.history .header button:active {
+.history .historytitle button:active {
   box-shadow: 5px 5px 15px 7px rgba(0,0,0,0.3);
 }

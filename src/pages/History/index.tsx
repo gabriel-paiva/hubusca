@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import HistoryCard from '../../components/HistoryCard';
+import Header from '../../components/Header';
 
 interface IUserData {
   login: string,
@@ -31,8 +32,9 @@ const History: React.FC = () => {
   }, []);
   return (
     <div className="App">
+      <Header />
       <div className="history">
-        <div className="header">
+        <div className="historytitle">
           <h1>Histórico</h1>
           <button onClick={deleteHistory} type="button">Limpar Histórico</button>
         </div>
