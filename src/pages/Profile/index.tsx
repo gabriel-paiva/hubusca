@@ -1,8 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './styles.css';
 import api from '../../services/api';
 import RepositoryCard from '../../components/RepositoryCard';
+
+interface IRepositoryData {
+  name: string,
+  html_url: string,
+  language: string,
+  created_at: string,
+  updated_at: string,
+  description: string,
+}
 
 interface IUserData {
   login: string,
@@ -23,9 +32,14 @@ const Profile: React.FC = () => {
   const state = location.state as ILocationState;
   const { userData } = state;
 
+  const [repositories, setRepositories] = useState<IRepositoryData[]>([]);
+
   useEffect(() => {
     api.get(`/users/${userData.login}/repos`)
-      .then((response) => console.log(response));
+      .then((response) => {
+        const repositoryData = response.data;
+        setRepositories(repositoryData);
+      });
   }, []);
 
   return (
@@ -49,11 +63,7 @@ const Profile: React.FC = () => {
         <div className="cssline" />
         <div className="repositories">
           <h1>{`Repositórios de ${userData.name}`}</h1>
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
+          {repositories.map((repository) => <RepositoryCard repository={repository} />)}
         </div>
       </div>
     </div>

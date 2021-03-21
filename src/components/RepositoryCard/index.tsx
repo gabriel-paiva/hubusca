@@ -1,27 +1,40 @@
 import React from 'react';
 import './styles.css';
 
-const RepositoryCard: React.FC = () => (
-  <div className="repositorycard">
-    <a href="https://github.com/gabriel-paiva/gota"><h1>Gota</h1></a>
-    <p>
-      <strong>Linguagem:</strong>
-      {' '}
-      Javascript
-    </p>
-    <p>
-      <strong>Criado em:</strong>
-      {' '}
-      66/66/66
-    </p>
-    <p>
-      <strong>Última atualização:</strong>
-      {' '}
-      66/66/66
-    </p>
-    <p>Calculadora de tarifas de água do Brasil.</p>
+interface IRepositoryData {
+  name: string,
+  html_url: string,
+  language: string,
+  created_at: string,
+  updated_at: string,
+  description: string,
+}
 
-  </div>
-);
+interface IProps {
+  repository: IRepositoryData
+}
+
+const RepositoryCard: React.FC<IProps> = ({ repository }: IProps) => {
+  console.log(repository);
+  return (
+    <div className="repositorycard">
+      <a href={repository.html_url}><h1>{repository.name}</h1></a>
+      <p>
+        <strong>Linguagem:</strong>
+        {` ${repository.language || 'Não determinada.'}`}
+      </p>
+      <p>
+        <strong>Criado em:</strong>
+        {` ${repository.created_at}`}
+      </p>
+      <p>
+        <strong>Última atualização:</strong>
+        {` ${repository.updated_at}`}
+      </p>
+      <p>{repository.description}</p>
+
+    </div>
+  );
+};
 
 export default RepositoryCard;
