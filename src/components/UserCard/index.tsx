@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 interface IUserData {
@@ -17,7 +18,14 @@ const UserCard: React.FC<IProps> = ({ userData }: IProps) => {
 
   return (
     <div className="usercard">
-      <img src={`${userData.avatarUrl}.jpeg`} alt="Avatar" />
+      <Link
+        to={{
+          pathname: '/profile',
+          state: { userData },
+        }}
+      >
+        <img src={userData.avatarUrl} alt="Avatar" />
+      </Link>
       <div className="data">
         <h1>{userData.name}</h1>
         <p><strong>Usuário:</strong></p>
