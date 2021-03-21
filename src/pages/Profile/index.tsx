@@ -65,7 +65,9 @@ const Profile: React.FC = () => {
         <div className="cssline" />
         <div className="repositories">
           <h1>{`Repositórios de ${userData.name}`}</h1>
-          {repositories.map((repository) => <RepositoryCard repository={repository} />)}
+          {repositories.map(
+            (repository) => <RepositoryCard key={repository.name} repository={repository} />,
+          )}
         </div>
       </div>
     </div>

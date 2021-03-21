@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import HistoryCard from '../../components/HistoryCard';
@@ -38,7 +39,7 @@ const History: React.FC = () => {
           <h1>Histórico</h1>
           <button onClick={deleteHistory} type="button">Limpar Histórico</button>
         </div>
-        {history.map((user) => <HistoryCard userData={user} />)}
+        {history.map((user, index) => <HistoryCard key={index} userData={user} />)}
       </div>
     </div>
   );
