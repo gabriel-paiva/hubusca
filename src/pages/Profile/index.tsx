@@ -15,12 +15,12 @@ interface IRepositoryData {
 
 interface IUserData {
   login: string,
-  avatarUrl: string,
+  avatar_url: string,
   name: string,
   location: string,
   id: number,
   followers: number,
-  publicRepos: number
+  public_repos: number
 }
 
 interface ILocationState {
@@ -46,7 +46,7 @@ const Profile: React.FC = () => {
     <div className="App">
       <div className="profile">
         <div className="userstats">
-          <img src={userData.avatarUrl} alt="Avatar" />
+          <img src={userData.avatar_url} alt="Avatar" />
           <p><strong>Nome:</strong></p>
           <p>{userData.name}</p>
           <p><strong>Usuário:</strong></p>
@@ -58,7 +58,7 @@ const Profile: React.FC = () => {
           <p><strong>Seguidores:</strong></p>
           <p>{userData.followers}</p>
           <p><strong>Repositórios Públicos:</strong></p>
-          <p>{userData.publicRepos}</p>
+          <p>{userData.public_repos}</p>
         </div>
         <div className="cssline" />
         <div className="repositories">

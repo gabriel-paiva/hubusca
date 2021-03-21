@@ -26,8 +26,6 @@ const Home: React.FC = () => {
     api.get(`/users/${username}`)
       .then((response) => {
         const userData = response.data;
-        userData.avatarUrl = response.data.avatar_url;
-        userData.publicRepos = response.data.public_repos;
         setResult(<UserCard userData={userData} />);
       })
       .catch(() => setResult(<ErrorCard />));

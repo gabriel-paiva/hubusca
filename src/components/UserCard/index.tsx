@@ -4,7 +4,7 @@ import './styles.css';
 
 interface IUserData {
   login: string,
-  avatarUrl: string,
+  avatar_url: string,
   name: string,
   location: string
 }
@@ -24,7 +24,7 @@ const UserCard: React.FC<IProps> = ({ userData }: IProps) => {
           state: { userData },
         }}
       >
-        <img src={userData.avatarUrl} alt="Avatar" />
+        <img src={userData.avatar_url} alt="Avatar" />
       </Link>
       <div className="data">
         <h1>{userData.name}</h1>
