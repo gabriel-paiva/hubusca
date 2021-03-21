@@ -19,3 +19,9 @@
   width: 100px;
   height: auto;
 }
+
+@media(max-width: 370px){
+  .header {
+    position: absolute;
+  }
+}
