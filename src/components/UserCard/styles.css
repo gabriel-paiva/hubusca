@@ -15,6 +15,7 @@
 
 .usercard .cssline {
   height: 2px;
+  width: 100%;
   background-color: #6F7480;
 }
 
@@ -34,4 +35,29 @@
 
 .usercard .data h1 {
   font-size: 1.4em;
+}
+
+@media(max-width:970px){
+  .usercard {
+    margin-top: 200px;
+  }
+}
+
+@media(max-width:720px){
+  .usercard {
+    margin-top: 210px;
+  }
+}
+@media(max-width:510px){
+  .usercard {
+    max-width: 250px;
+    height: 500px;
+    padding: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .usercard img {
+    width: 100px;
+    height: 100px;
+  }
 }
