@@ -1,0 +1,22 @@
+.repositorycard {
+  width: 100%;
+  background-color: #F7F7FB;
+  border-radius: 8px;
+  border: 1px solid #6F7480;
+  padding: 10px;
+
+  font-family: Roboto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.repositorycard a {
+  color: #549CDD;
+}
+
+.repositorycard p {
+  font-size: .9em;
+}

@@ -1,0 +1,157 @@
+.App form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 250px;
+  width: 100vw;
+  padding: 10px;
+}
+
+.App form img {
+  width: 300px;
+  height: auto;
+}
+
+.App form input {
+  height: 75px;
+  width: 50%;
+  min-width: 255px;
+  background-color: #F7F7FB;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 20px;
+  font-size: 1.2em;
+
+  box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.3);
+}
+
+.App form .buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  width: 50%;
+}
+
+.App form button {
+  width: 170px;
+  height: 50px;
+  border-radius:  50px;
+  outline: none;
+  font-size: 1.1em;
+}
+
+.App form .buttons button:hover {
+  cursor: pointer;
+}
+
+.App form .buttons button:active {
+  box-shadow: 5px 5px 15px 7px rgba(0,0,0,0.3);
+}
+
+.App form .buttons #search {
+  border: none;
+  background-color: #161A22;
+  color: #F7F7FB;
+}
+
+.App form .buttons #search:hover {
+  background-color: #090B10;
+}
+
+.App form .buttons #link {
+  border: 1px solid #6F7480;
+  background-color: #F7F7FB;
+  color: #161A22;
+}
+
+.App form .buttons #link:hover {
+  border-color:#161A22;
+  background-color: #F2F2F5;
+  color: #161A22;
+}
+
+.App .searching {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+
+  min-height: 50px;
+  width: 100vw;
+
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 10px;
+
+  border-bottom: 2px solid #6F7480;
+}
+
+.App .searching input{
+  height: 50px;
+  max-width: 400px;
+}
+
+.App .searching .buttons {
+  max-width: 400px;
+}
+
+.App .searching img {
+  width: 100px;
+  height: auto;
+}
+
+@media(max-width:970px){
+  .App .searching {
+    flex-direction: column;
+    min-height: 200px;
+  }
+}
+
+@media(max-width:720px){
+  .App form {
+    min-height: 350px;
+  }
+  .App form img {
+    width: 50%;
+    min-width: 250px;
+    height: auto;
+  }
+  .App form .buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 130px;
+    width: 95vw;
+  }
+  .App .searching {
+    flex-direction: column;
+    min-height: 200px;
+  }
+  .App .searching img {
+    width: 100px;
+    min-width: 100px;
+    height: auto;
+  }
+  .App .searching .buttons {
+    min-height: 90px;
+  }
+  .App .searching button {
+    height: 40px;
+    width: 140px;
+    font-size: 1em;
+  }
+  .App .searching input {
+    height: 40px;
+  }
+}
+@media(max-width: 370px){
+  .App .searching {
+    position: absolute;
+  }
+}

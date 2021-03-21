@@ -1,12 +1,9 @@
 import React from 'react';
+import Routes from './routes';
+import './global.css';
 
-const App: React.FC = () => {
-  console.log('Hello World');
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  );
-};
+const App: React.FC = () => (
+  <Routes />
+);
 
 export default App;

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: #E6E4EE;
+}
+
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #E6E4EE;
+  color: #090B10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
